@@ -1,0 +1,90 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.container--flex,
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav__item {
+  position: relative;
+
+  & + & {
+    margin-left: 50px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $title-text-color;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include mainTransition(color);
+
+  &:hover,
+  &:focus,
+  &--current {
+    color: $accent-color;
+  }
+
+  &--current::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}
+
+/*contacts*/
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.auth-nav__link {
+  display: flex;
+  align-items: center;
+  color: $secondary-text-color;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include mainTransition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.auth-nav__icon {
+  margin-right: 10px;
+  fill: $secondary-text-color;
+
+  @include mainTransition(fill);
+
+  .auth-nav__link:hover &,
+  .auth-nav__link:focus & {
+    fill: currentColor;
+  }
+}

@@ -1,0 +1,267 @@
+.hero {
+  text-align: center;
+  background-color: $hero-background-color;
+  padding: 200px 0;
+  max-width: 1600px;
+  @extend %marginAuto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+
+  background-position: center;
+}
+.hero__title {
+  margin-bottom: 30px;
+  color: $primary-white-color;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero__button {
+  border: transparent;
+  min-width: 200px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  color: $primary-white-color;
+  background-color: $accent-color;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  @include mainTransition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $blue-hover;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-height: 581px;
+  min-width: 528px;
+
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  background-color: $primary-white-color;
+  border-radius: 50%;
+  border-color: #0000001a;
+
+  cursor: pointer;
+}
+
+.modal__icon {
+  transform: translate(-11%, 11%);
+
+  @include mainTransition(fill);
+
+  .modal__button-close:hover & {
+    fill: $accent-color;
+  }
+}
+
+.modal-form__text {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  margin-top: 40px;
+
+  color: $title-text-color;
+}
+
+.modal-form {
+  padding: 40px;
+}
+
+.modal-form__list {
+  margin-bottom: 20px;
+}
+
+.modal-form__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.modal__button-send {
+  @include centeredFlex();
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @extend %marginAuto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: $primary-white-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+
+  cursor: pointer;
+
+  @include mainTransition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $blue-hover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}
+
+.policy__link {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: $accent-color;
+}
+
+.policy__field {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  margin-bottom: 4px;
+}
+
+.modal-form__input {
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  min-height: 40px;
+  width: 448px;
+
+  @include mainTransition(border);
+
+  &:focus {
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+    outline: transparent;
+  }
+}
+
+.modal-form__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translatey(-50%);
+
+  @include mainTransition(fill);
+
+  .modal-form__input:focus + & {
+    fill: $accent-color;
+  }
+}
+
+.modal-form__textarea {
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus-within {
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+    outline: transparent;
+
+    &::placeholder {
+      color: #75757580;
+      line-height: 1.02;
+    }
+  }
+}
+
+.policy__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-text-color;
+  border-radius: 2px;
+  margin-right: 8px;
+
+  @include mainTransition(background-color);
+
+  .policy__checkbox:checked + & {
+    background-color: $accent-color;
+    background-image: url("../images/icon-check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    border-color: $accent-color;
+  }
+}
+
+.policy__checkbox {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.policy {
+  @include centeredFlex();
+  @extend %marginAuto;
+}
+
+.modal-form__wrap {
+  position: relative;
+}

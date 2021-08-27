@@ -1,0 +1,115 @@
+.container--flex-baseline {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer {
+  background-color: $hero-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-address {
+  color: $primary-white-color;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.footer-address__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  @include mainTransition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-address__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-bold-text {
+  display: inline-block;
+  color: $primary-white-color;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  margin-left: 70px;
+}
+
+.footer-input-box {
+  margin-left: 93px;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-form__input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: inherit;
+
+  color: $primary-white-color;
+  background-color: $hero-background-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+    outline: transparent;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.footer-form__button {
+  @include centeredFlex();
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  margin-left: 12px;
+
+  background-color: $accent-color;
+  color: $primary-white-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+
+  cursor: pointer;
+
+  @include mainTransition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $blue-hover;
+  }
+}
+
+.footer-form__icon {
+  fill: $primary-white-color;
+  margin-left: 10px;
+}

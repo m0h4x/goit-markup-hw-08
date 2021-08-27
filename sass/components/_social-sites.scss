@@ -1,0 +1,51 @@
+.socials {
+  display: flex;
+}
+
+.socials--margin-top {
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.socials__link {
+  @include centeredFlex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  @include mainTransition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.socials__link--bglight {
+  background-color: $primary-white-color;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__icon {
+  fill: $icons-color;
+
+  @include mainTransition(fill);
+
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: $primary-white-color;
+  }
+}
+
+.socials__link--bg-dark {
+  background-color: #ffffff1a;
+}
+
+.socials__icon--fill-reverse {
+  fill: $primary-white-color;
+
+  @include mainTransition(fill);
+}
