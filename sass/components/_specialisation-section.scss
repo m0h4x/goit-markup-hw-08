@@ -1,0 +1,44 @@
+.specialisation-list,
+.team-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  /* margin-bottom: -30px; */
+}
+.characteristics-list .title,
+.specialisation-list .title {
+  color: $title-text-color;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.services-list-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-size: inherit;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.spec-sec {
+  padding-top: 0;
+}
+.spec-item {
+  position: relative;
+  width: 370;
+  margin-right: 30px;
+  z-index: 1;
+}
+.out-specs {
+  margin-right: 30px;
+}

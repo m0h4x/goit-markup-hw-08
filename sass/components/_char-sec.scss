@@ -8,15 +8,19 @@
   display: flex;
   margin-right: -30px;
 }
-/*Чем мы занимаемся*/
-/*Наша команда*/
+.characteristics-list .title {
+  color: $title-text-color;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
 .specialisation-list,
 .team-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin-right: -30px;
-  /* margin-bottom: -30px; */
 }
 .characteristics-list .title,
 .specialisation-list .title {

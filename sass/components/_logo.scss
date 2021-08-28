@@ -9,7 +9,9 @@
 .logo__color {
   color: #000000;
 }
-
-.logo__color--inverse {
+.logo-color__prefix {
+  color: $accent-color;
+}
+.logo-color__suffix {
   color: $primary-white-color;
 }

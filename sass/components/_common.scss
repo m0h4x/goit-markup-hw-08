@@ -1,7 +1,5 @@
 .container {
   width: 1200px;
-  //   margin-left: auto;
-  //   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   @extend %marginAuto;
@@ -11,7 +9,7 @@
   padding-bottom: 94px;
 }
 .section__title {
-  color: var(--title-text-color);
+  color: $title-text-color;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;

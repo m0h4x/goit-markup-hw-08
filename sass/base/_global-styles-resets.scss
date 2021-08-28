@@ -1,12 +1,11 @@
 body {
-  background-color: var(--primary-white-color);
-  color: var(--secondary-text-color);
+  background-color: $primary-white-color;
+  color: $secondary-text-color;
   font-family: "Roboto", sans-serif;
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-size: 14px;
 }
-
 h1,
 h2,
 h3,
@@ -14,19 +13,27 @@ p {
   padding: 0;
   margin: 0;
 }
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
+a {
+  text-decoration: none;
+}
 textarea {
   resize: none;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
