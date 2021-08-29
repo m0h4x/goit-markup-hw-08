@@ -123,9 +123,7 @@ textarea {
 }
 
 .site-nav .item:last-child,
-.site-adr .item:last-child,
-.characteristics-list .item:last-child,
-.specialisation-list .item:last-child {
+.site-adr .item:last-child {
   margin-right: 0;
 }
 
@@ -615,76 +613,6 @@ textarea {
   border-radius: 4px;
 }
 
-.site-nav .item:last-child,
-.site-adr .item:last-child,
-.characteristics-list .item:last-child,
-.specialisation-list .item:last-child {
-  margin-right: 0;
-}
-
-.characteristics-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: -30px;
-}
-
-.characteristics-list .title {
-  color: #000000;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.specialisation-list,
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -30px;
-}
-
-.characteristics-list .title,
-.specialisation-list .title {
-  color: #000000;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.characteristics-list .link {
-  color: #2196f3;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  padding: 25px 0;
-}
-
-.icons-icon {
-  width: 70px;
-  height: 70px;
-}
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -696,7 +624,115 @@ textarea {
   border: 0;
 }
 
-.specialisation-list {
+.title-sks {
+  color: #212121;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.paragraph-sks {
+  font-size: 14px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.char-list .item:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .char-list {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .char-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .char-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .char-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .char-list__item {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .char-list__item {
+    margin: 0 30px 0 0;
+  }
+  .char-list__item:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.char-list__toe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 0;
+}
+
+.char-list__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.char-list .title {
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.char-list .title {
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.char-list .link {
+  color: #2196f3;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.spec-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,7 +751,7 @@ textarea {
   z-index: 1;
 }
 
-.specialisation-list .title {
+.spec-list .title {
   color: #000000;
   font-weight: bold;
   font-size: 14px;
@@ -742,8 +778,8 @@ textarea {
   padding-top: 0;
 }
 
-.out-specs {
-  margin-right: 30px;
+.spec-list .item:last-child {
+  margin-right: 0;
 }
 
 .team-list {
@@ -780,23 +816,6 @@ textarea {
 
 .team-list-description {
   padding: 30px 0;
-}
-
-.title-sks {
-  color: #212121;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  margin-top: 30px;
-}
-
-.paragraph-sks {
-  font-size: 14px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: #757575;
 }
 
 .paragraph {

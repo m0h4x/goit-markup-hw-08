@@ -1,4 +1,4 @@
-.specialisation-list {
+.spec-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
   margin-right: 30px;
   z-index: 1;
 }
-.specialisation-list .title {
+.spec-list .title {
   color: $title-text-color;
   font-weight: bold;
   font-size: 14px;
@@ -37,6 +37,7 @@
   padding-top: 0;
 }
 
-.out-specs {
-  margin-right: 30px;
+
+.spec-list .item:last-child {
+  margin-right: 0;
 }
