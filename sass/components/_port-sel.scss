@@ -1,34 +1,40 @@
-.por-sel {
+.port-sel {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
+  @media screen and( max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+  }
+
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }
-.por-sel__item:not(:last-child) {
-  margin-right: 8px;
-}
-.por-sel .link {
-  color: $primary-white-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  text-decoration: none;
-}
-.por-sel .link:hover,
-.por-sel .link:focus {
-  color: $accent-color;
+.port-sel__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and( max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
-.por-sel .link-current {
-  color: $accent-color;
-}
-.portfolio-navigation {
+
+.port-sel__button {
   border: transparent;
   color: $primary-text-color;
   background-color: $por-sel-background;
   padding: 6px 22px;
+
   transition-property: background-color, color, box-shadow, border-radius;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
   &:hover,
   &:focus {
     background-color: $accent-color;

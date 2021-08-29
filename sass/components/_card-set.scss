@@ -1,21 +1,59 @@
 .card-set {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  margin-right: -30px;
-  margin-bottom: -30px;
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin: -15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
+.card-set__title {
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+.card-set__descr {
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}
 
-.card-set_item {
-  width: calc(100% / 3 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  &:nth-child(3n) {
-    margin-right: 0;
+.card-set__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+
+  @media screen and (min-width: 768px) and(max-width: 1199px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -52,12 +90,34 @@
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
+
+@media screen and(min-width: 768px) and(max-width: 1199px) {
+  .card-set__text--big {
+    flex-basis: 142px;
+    flex-grow: 1;
+  }
+}
 .card-set__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+
   @include mainTransition(box-shadow);
+
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-set__image {
+  @media screen and( max-width: 767px) {
+    width: 450px;
+    height: 294px;
+  }
+
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    width: 354px;
+    height: 294px;
   }
 }
