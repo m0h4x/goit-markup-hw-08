@@ -191,15 +191,21 @@
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="spec-list list">
                     <li class="spec-item">
-                        <img src="./images/box1.jpg" alt="box1" width="370">
+                        <img src="./images/img1-1x.jpg" 
+                        srcset="./images/img1-1x.jpg 1x, ./images/img1-2x.jpg 2x"
+                        alt="box1" width="370" height="294">
                         <h3 class="spec-list-title">Десктопные приложения</h3>
                     </li>
                     <li class="spec-item">
-                        <img src="./images/img2.jpg" alt="img2" width="370">
+                        <img src="./images/img2-1x.jpg" 
+                        srcset="./images/img2-1x.jpg 1x, ./images/img2-2x.jpg 2x"
+                         alt="img2" width="370" height="294">
                         <h3 class="spec-list-title">Мобильные приложения</h3>
                     </li>
                     <li class="spec-item">
-                        <img src="./images/img3.jpg" alt="img3" width="370">
+                        <img src="./images/img3-1x.jpg" 
+                        srcset="./images/img3-1x.jpg 1x, ./images/img3-2x.jpg 2x"
+                         alt="img3" width="370" height="294">
                         <h3 class="spec-list-title">Дизайнерские решения</h3>
                     </li>
                 </ul>
@@ -212,7 +218,14 @@
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team-list list">
-                    <li class="team-list__item"><img src="./images/face1.jpg" alt="face1" width="270">
+                    <li class="team-list__item">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./images/face1-desktop1x.jpg 1x, ./images/face1-desktop2x.jpg 2x">
+                            <source media="(min-width: 768px)" srcset="./images/face1-tablet1x.jpg 1x, ./images/face1-tablet2x.jpg 2x">
+                            <source media="(max-width: 480px)" srcset="./images/face1-mobile1x.jpg 1x, ./images/face1-mobile2x.jpg 2x">
+                            <img class="team-list__img" src="./images/face1-mobile1x.jpg"
+                                alt="face1" width="270" height="260">
+                        </picture>
                         <div class="team-list-description">
                             <h3 class="team-list__title">Игорь Демьяненко</h3>
                             <p class="paragraph">Product Designer</p>
@@ -251,7 +264,12 @@
 
                         </div>
                     </li>
-                    <li class="team-list__item"><img src="./images/face2.jpg" alt="face2" width="270">
+                    <li class="team-list__item"><picture>
+                        <source media="(min-width: 1200px)" srcset="./images/face2-desktop1x.jpg 1x, ./images/face2-desktop2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="./images/face2-tablet1x.jpg 1x, ./images/face2-tablet2x.jpg 2x">
+                        <source media="(max-width: 480px)" srcset="./images/face2-mobile1x.jpg 1x, ./images/face2-mobile2x.jpg 2x">
+                        <img class="team-list__img" src="./images/face2-mobile1x.jpg" alt="face2" width="270" height="260">
+                    </picture>
                         <div class="team-list-description">
                             <h3 class="team-list__title">Ольга Репина</h3>
                             <p class="paragraph">Frontend Developer</p>
@@ -288,7 +306,12 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team-list__item"><img src="./images/face3.jpg" alt="face3" width="270">
+                    <li class="team-list__item"><picture>
+                        <source media="(min-width: 1200px)" srcset="./images/face3-desktop1x.jpg 1x, ./images/face3-desktop2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="./images/face3-tablet1x.jpg 1x, ./images/face3-tablet2x.jpg 2x">
+                        <source media="(max-width: 480px)" srcset="./images/face3-mobile1x.jpg 1x, ./images/face3-mobile2x.jpg 2x">
+                        <img class="team-list__img" src="./images/face3-mobile1x.jpg" alt="face3" width="270" height="260">
+                    </picture>
                         <div class="team-list-description">
                             <h3 class="team-list__title">Николай Тарасов</h3>
                             <p class="paragraph">Marketing</p>
@@ -325,7 +348,12 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team-list__item"><img src="images/face4.jpg" alt="face4" width="270">
+                    <li class="team-list__item"><picture>
+                        <source media="(min-width: 1200px)" srcset="./images/face4-desktop1x.jpg 1x, ./images/face4-desktop2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="./images/face4-tablet1x.jpg 1x, ./images/face4-tablet2x.jpg 2x">
+                        <source media="(max-width: 480px)" srcset="./images/face4-mobile1x.jpg 1x, ./images/face4-mobile2x.jpg 2x">
+                        <img class="team-list__img" src="./images/face4-mobile1x.jpg" alt="face4" width="270" height="260">
+                    </picture>
                         <div class="team-list-description">
                             <h3 class="team-list__title">Михаил Ермаков</h3>
                             <p class="paragraph">UI Designer</p>
