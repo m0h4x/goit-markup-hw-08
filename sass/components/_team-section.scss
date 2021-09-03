@@ -22,54 +22,17 @@
   text-align: center;
   margin-bottom: 10px;
 }
-.team-list-description {
-  padding: 30px 0;
-}
-
-.paragraph {
+.team-list__profession {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
   text-align: center;
 }
-.team-icon-item:not(:last-child) {
-  margin-right: 10px;
-}
-.team-list-site {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-}
-.team-list-icon {
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: $primary-white-color;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-  }
+.team-list__description {
+  padding: 30px 0;
 }
 
-.site-icon {
-  fill: $icons-color;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  .team-list-icon:hover &,
-  .team-list-icon:focus & {
-    fill: $primary-white-color;
-  }
-}
 .par-sec {
   background-color: $por-sel-background;
 }
-

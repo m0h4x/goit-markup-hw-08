@@ -8,27 +8,7 @@
   overflow: hidden;
   border: 0;
 }
-.title-sks {
-  color: $primary-text-color;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  margin-top: 30px;
-}
-.paragraph-sks {
-  font-size: 14px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: $secondary-text-color;
-}
 
-
-
-.char-list .item:last-child {
-  margin-right: 0;
-}
 .char-list {
   @media screen and(max-width: 767px) {
     max-width: 480px;
@@ -43,7 +23,6 @@
     margin: -15px;
   }
 }
-
 .char-list__item {
   @media screen and(max-width: 767px) {
     &:not(:last-child) {
@@ -71,34 +50,22 @@
   border-radius: 4px;
   padding: 25px 0;
 }
-
 .char-list__icon {
   width: 70px;
   height: 70px;
 }
-.char-list .title {
+.char-list__title {
   color: $title-text-color;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-}
 
-.char-list .title {
-  color: $title-text-color;
-  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.char-list__text {
   font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.char-list .link {
-  color: $accent-color;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
+  line-height: 1.18;
   letter-spacing: 0.03em;
-  color: $primary-text-color;
+  color: $secondary-text-color;
 }
-
-
