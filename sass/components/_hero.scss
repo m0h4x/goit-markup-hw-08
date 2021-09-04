@@ -2,15 +2,42 @@
   background: $hero-background-color;
   text-align: center;
   padding: 200px 0;
+  @extend %marginAuto;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero.jpg);
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+    url(../images/Header-mobile1x.jpg);
+  background-size: cover;
+  background-position: center;
+
+  @media screen and(max-width: 767px) {
+    width: 480px;
+  }
+
+  @media screen and(min-width: 768px) {
+    max-width: 768px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/Header-tablet1x.jpg);
+  }
+
+  @media screen and(min-width: 1200px) {
+    max-width: 1600px;
+    padding: 200px 0;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/Header-desktop1x.jpg);
+  }
 }
 
 .hero__title {
