@@ -1126,10 +1126,15 @@ textarea {
 }
 
 .port-sel__button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
   border: transparent;
   color: #212121;
   background-color: #f5f4fa;
   padding: 6px 22px;
+  border-radius: 4px;
   -webkit-transition-property: background-color, color, border-radius, -webkit-box-shadow;
   transition-property: background-color, color, border-radius, -webkit-box-shadow;
   transition-property: background-color, color, box-shadow, border-radius;
