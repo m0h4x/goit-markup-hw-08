@@ -9,25 +9,133 @@
 .nav-flex {
   display: flex;
 }
-
+.container--flex,
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+.site-adr,
+.site-nav {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+}
 .site-nav {
   display: flex;
 
   margin-left: 93px;
 }
-.site-nav__item {
-  position: relative;
+.mobile-menu {
+  display: flex;
+  align-items: center;
 
-  & + & {
-    margin-left: 50px;
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+.page-nav__menu-container {
+  @media screen and(max-width: 767px) {
+    display: none;
+    position: absolute;
+    min-width: 482px;
+    width: 100%;
+    top: 90%;
+    left: 0px;
+
+    z-index: 999;
+
+    background-color: $primary-white-color;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.menu-button {
+  @media screen and(max-width: 767px) {
+    display: inline-flex;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+.menu-button__burger-icon {
+  display: none;
+
+  .menu-button:hover &,
+  .menu-button:focus & {
+    fill: $accent-color;
+  }
+}
+
+.menu-button__cross-icon {
+  .menu-button:hover &,
+  .menu-button:focus & {
+    fill: $accent-color;
+  }
+}
+.is-open .menu-button__burger-icon {
+  display: block;
+}
+
+.is-open .menu-button__cross-icon {
+  display: none;
+}
+
+.site-nav--mobile {
+  @media screen and(max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    padding-left: 40px;
+    margin-bottom: 300px;
+  }
+}
+
+.site-adr--mobile {
+  @media screen and(max-width: 767px) {
+    padding-left: 40px;
+    margin-bottom: 64px;
+  }
+}
+.site-nav {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+}
+.site-nav__item {
+  @media screen and(min-width: 768px) {
+    position: relative;
+
+    & + & {
+      margin-left: 50px;
+    }
+  }
+
+  @media screen and(max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    position: relative;
   }
 }
 .site-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $primary-text-color;
+  color: $title-text-color;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -35,12 +143,124 @@
   @include mainTransition(color);
 
   &:hover,
-  &:focus,
-  &--current {
+  &:focus {
     color: $accent-color;
+  }
+
+  @media screen and(max-width: 767px) {
+    font-size: 40px;
+
+    &--current {
+      color: $accent-color;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &--current {
+      color: $accent-color;
+    }
+
+    &--current::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+  }
+}
+.site-adr__link {
+  color: $secondary-text-color;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include mainTransition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and(max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;
+
+    &:hover,
+    &:focus {
+      font-size: 34px;
+    }
+  }
+  @media screen and(min-width: 768px) {
+  }
+}
+.site-adr {
+  @media screen and(min-width: 768px) {
+    margin-left: auto;
+  }
+}
+.socials-set {
+  display: flex;
+  padding-left: 40px;
+  padding-bottom: 48px;
+}
+
+.socials-set__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  @media screen and(min-width: 768px) {
+    display: none;
   }
 }
 
+.socials-set__link {
+  color: $accent-color;
+}
+.site-adr__icon {
+  margin-right: 8px;
+  fill: $secondary-text-color;
+
+  @include mainTransition(fill);
+
+  .site-adr__link:hover &,
+  .site-adr__link:focus & {
+    fill: currentColor;
+  }
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+}
+@media screen and(min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
+  }
+
+  .site-adr {
+    display: flex;
+  }
+
+  .site-adr__link {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-adr__icon {
+    margin-right: 10px;
+  }
+}
 .site-adr {
   display: flex;
   margin-left: auto;
