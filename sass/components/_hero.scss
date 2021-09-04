@@ -258,7 +258,7 @@
   margin-right: 8px;
 
   @include mainTransition(background-color);
-  .modal-checkbox:checked + & {
+  .eula__checkbox:checked + & {
     background-color: $accent-color;
     background-image: url("../images/icon-check.svg");
     background-size: contain;
@@ -266,7 +266,7 @@
     border-color: $accent-color;
   }
 }
-.modal-checkbox {
+.eula__checkbox {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;

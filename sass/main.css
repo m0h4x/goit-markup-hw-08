@@ -536,7 +536,7 @@ textarea {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox:checked + .eula__icon {
+.eula__checkbox:checked + .eula__icon {
   background-color: #2196f3;
   background-image: url("../images/icon-check.svg");
   background-size: contain;
@@ -544,7 +544,7 @@ textarea {
   border-color: #2196f3;
 }
 
-.modal-checkbox {
+.eula__checkbox {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
