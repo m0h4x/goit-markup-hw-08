@@ -23,9 +23,9 @@
 <body>
 
     <!-- Шапка сайта -->
-    <header class="header">
-        <div class="container main-nav">
-            <nav class="nav-flex">
+    <header class="page-header">
+        <div class="container container--flex">
+            <nav class="page-nav">
                 <a href="./index.html" class="link logo">
                     Web<span class="logo__color">Studio</span>
                 </a>
@@ -55,6 +55,53 @@
 
             </ul>
         </div>
+
+
+<div class="mobile-menu">
+
+    <button type="button" class="menu-button is-open" data-menu-button aria-expanded="false"
+        aria-controls="menu-container">
+        <svg class="menu-button__icons" width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="menu-button__burger-icon" href="images/icons.svg#icon-adaptive-burger"></use>
+            <use class="menu-button__cross-icon" href="images/icons.svg#icon-adaptive-cross"></use>
+        </svg>
+    </button>
+
+    <div class="page-nav__menu-container" id="menu-container" data-menu>
+
+        <ul class="site-nav--mobile">
+            <li class="site-nav__item"><a href="./index.html" class="site-nav__link ">Студия</a>
+            </li>
+            <li class="site-nav__item"><a href="./portfolio.html" class=" site-nav__link  site-nav__link--current">Портфолио</a></li>
+            <li class="site-nav__item"><a href="#" class=" site-nav__link">Контакты</a></li>
+        </ul>
+
+        <ul class="site-adr--mobile">
+
+            <li class="site-adr__item"><a href="mailto:info@devstudio.com" class=" site-adr__link">
+                    <svg class="site-adr__icon" width="16" height="12">
+                        <use href="images/icons.svg#icon-envelop"></use>
+                    </svg>
+                    info@devstudio.com </a></li>
+
+            <li class="site-adr__item"><a href="tel:+380961111111" class=" site-adr__link">
+                    <svg class="site-adr__icon" width="10" height="16">
+                        <use href="images/icons.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a></li>
+        </ul>
+
+        <ul class="socials-set">
+            <li class="socials-set__item"> <a class="socials-set__link" href="#">Instagram</a></li>
+            <li class="socials-set__item"> <a class="socials-set__link" href="#">Facebook</a></li>
+            <li class="socials-set__item"> <a class="socials-set__link" href="#">Twitter</a></li>
+            <li class="socials-set__item"> <a class="socials-set__link" href="#">Linkedin</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
     </header>
     <main>
 
@@ -376,6 +423,7 @@
     <!-- Вся твоя разметка, включая разметку модалки -->
 
     <!-- Ставим перед закрывающим тегом body -->
+        <script src="./js/mobile-menu.js"></script>
     <script src="js/modal.js"></script>
 </body>
 
