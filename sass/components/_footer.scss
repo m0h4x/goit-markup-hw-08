@@ -31,9 +31,19 @@
 }
 .footer-address {
   font-style: normal;
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   margin-top: 20px;
   margin-bottom: 60px;
+}
+.footer-address__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  @include mainTransition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 .footer-adr .link {
   color: $icons-color;
@@ -46,17 +56,30 @@
   color: $accent-color;
 }
 .footer-address__item {
-  margin-bottom: 9px;
-}
-.footer-address__link {
-  color: var(--secondary-text-color);
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  @media screen and( max-width: 1199px) {
+    margin-bottom: 8px;
+  }
+  @media screen and( min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
-.footer-icons {
-  margin-left: 70px;
+
+.footer-socials {
+  @media screen and( max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
+    margin-left: 165px;
+  }
+
+  @media screen and( min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 .icons-list-name {
   color: $por-sel-background;
