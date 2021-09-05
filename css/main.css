@@ -908,8 +908,12 @@ textarea {
   color: #f5f4fa;
   text-transform: uppercase; }
 
-.footer-input-box {
-  margin-left: auto; }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-input-box {
+    text-align: center; } }
+@media screen and (min-width: 1200px) {
+  .footer-input-box {
+    margin-left: 93px; } }
 
 .footer-bold-text {
   display: inline-block;
@@ -917,8 +921,9 @@ textarea {
   text-transform: uppercase;
   margin-bottom: 20px; }
 
-.footer-form {
-  display: flex; }
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: flex; } }
 
 .footer-form__input {
   width: 358px;
@@ -932,11 +937,28 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px; }
+  .footer-form__input:focus {
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    outline: transparent; }
+  .footer-form__input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25; }
+  @media screen and (max-width: 1199px) {
+    .footer-form__input {
+      width: 450px;
+      height: 50px; } }
+  @media screen and (min-width: 1200px) {
+    .footer-form__input {
+      width: 358px;
+      height: 50px;
+      padding-left: 16px; } }
 
 .footer-form__button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -953,6 +975,24 @@ textarea {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .footer-form__button:hover, .footer-form__button:focus {
+    background-color: #188ce8; }
+  @media screen and (max-width: 767px) {
+    .footer-form__button {
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer-form__button {
+      margin-left: auto;
+      margin-right: auto; } }
+
+.footer-form__icon {
+  fill: #ffffff;
+  margin-left: 10px; }
+
+@media screen and (max-width: 767px) {
+  .socials {
+    justify-content: center; } }
 
 .logo {
   color: #2196f3;
