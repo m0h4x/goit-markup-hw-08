@@ -854,7 +854,8 @@ textarea {
     display: flex;
     align-items: baseline;
     justify-content: center;
-    text-align: center; } }
+    text-align: center;
+    margin-bottom: 60px; } }
 @media screen and (min-width: 1200px) {
   .footer__tablet-flex {
     display: flex;
@@ -868,8 +869,7 @@ textarea {
 .footer-address {
   font-style: normal;
   color: #ffffff;
-  margin-top: 20px;
-  margin-bottom: 60px; }
+  margin-top: 20px; }
 
 .footer-address__link {
   color: rgba(255, 255, 255, 0.6);
@@ -910,7 +910,9 @@ textarea {
 
 .icons-list-name {
   color: #f5f4fa;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block; }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-input-box {
@@ -930,6 +932,7 @@ textarea {
     display: flex; } }
 
 .footer-form__input {
+  margin-bottom: 20px;
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -937,7 +940,7 @@ textarea {
   line-height: 1.25;
   letter-spacing: inherit;
   color: #ffffff;
-  background-color: var(--hero-background-color);
+  background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px; }
