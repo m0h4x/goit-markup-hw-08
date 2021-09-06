@@ -271,9 +271,6 @@ textarea {
 .socials-set__link {
   color: #2196f3; }
 
-.site-adr__item:not(:last-child) {
-  margin-right: 50px; }
-
 .site-adr__icon {
   margin-right: 10px;
   fill: #757575;
